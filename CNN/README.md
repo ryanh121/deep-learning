@@ -1,3 +1,17 @@
+# Data Augmentation
+```
+transform_train = transforms.Compose([
+    transforms.ColorJitter(
+            brightness=0.1*torch.abs(torch.randn(1)).item(),
+            contrast=0.1*torch.abs(torch.randn(1)).item(),
+            saturation=0.1*torch.abs(torch.randn(1)).item(),
+            hue=0.1*torch.abs(torch.randn(1)).item()),
+    transforms.RandomRotation(20),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+])
+```
 # Convolution Network Structure
 ```
 Convolution layer 1: 3 input channels, 64 output channels, k = 4; s = 1; P = 2.
