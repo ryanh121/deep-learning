@@ -1,1 +1,1 @@
-# ResNet and Transfer Learning
+# ResNet and Transfer Learning for CIFAR100
